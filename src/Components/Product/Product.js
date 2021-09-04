@@ -32,9 +32,9 @@ export default function Product() {
                     <span className="productSingle-info__princ-cardPortion">EM ATÉ 3X DE R$80,70</span>
                 </div>
                 <div className="productSingle-info__colors">
-                <div className="productSingle-info__colors-option" style={(product.id===1)?{backgroundColor:`${product.colors[0].colorHex}`}:('')}>515151
+                <div className="productSingle-info__colors-option" style={(product.id===1)?{backgroundColor:`${product.colors[0].colorHex}`}:('')}>
                 </div>
-                <div className="productSingle-info__colors-option" style={(product.id===1)?{backgroundColor:`${product.colors[1].colorHex}`}:('')}>515151
+                <div className="productSingle-info__colors-option" style={(product.id===1)?{backgroundColor:`${product.colors[1].colorHex}`}:('')}>
                 </div>
                 </div>
             <div className="productSingle-info__sizes">

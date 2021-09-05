@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartContext from '../../context/cart/CartContext'
 import './Header.css'
 
 export default function Header() {
+    const {showHideCart}=useContext(CartContext);
     return (
         <header className="header">
         <span className="header-promotion">15% DE DESCONTO NA SEGUNDA COMPRA <span>-</span><u>SAIBA MAIS</u>
@@ -28,7 +30,7 @@ export default function Header() {
             <button className="header-user__search-btn" type="button"><i className="fas fa-search"></i></button>
             </div>
             <div className="header-user__btns">
-           <button className="header-user__btn-cart" type="button" ><i className="fas fa-shopping-bag"></i></button>
+           <button className="header-user__btn-cart" type="button" onClick={()=>showHideCart()}><i className="fas fa-shopping-bag"></i></button>
            <button className="header-user__btn-user" type="button"><i className="far fa-user"></i></button>
                 </div>          
         </div>

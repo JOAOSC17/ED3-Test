@@ -1,9 +1,11 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Product.css'
 import ProductCarrousel from './ProductCarrousel/ProductCarrousel'
+import CartContext from '../../context/cart/CartContext';
 export default function Product() {
     const [product, setProduct] = useState([])
+    const {addToCart}= useContext(CartContext)
     function formatCurrency (currency){
       return  new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(currency)
     }
@@ -12,8 +14,8 @@ export default function Product() {
         .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products/1`)
         .then(response=>setProduct(response.data))
         .catch(err=>console.error(err))
+        console.log(product);
     },[])
-    console.log(product);
     if(product.length===0) return <span>Carregando..</span>
     return (
         <main className="main">
@@ -44,7 +46,7 @@ export default function Product() {
                 <span className={`productSingle-info__sizes-size ${(product.sizes.xg) ?("active"):('')}`}>XG</span>
                 <span className="productSingle-info__sizes-guide">Ver guia de tamanhos</span>
                     <div className="productSingle-info__cta">
-                        <button className="productSingle-info__cta-addCart">ADICIONAR À SACOLA</button>
+                        <button className="productSingle-info__cta-addCart" onClick={()=>addToCart(product)}>ADICIONAR À SACOLA</button>
                         <p className="productSingle-info__cta-desc">Lorem ipsum dolor sit amet, consectetur adipiscing 
                         elit. Integer sed gravida arcu. Aliquam molestie dapibus 
                         ligula, id consectetur enim euismod vel. In vulputat.</p>

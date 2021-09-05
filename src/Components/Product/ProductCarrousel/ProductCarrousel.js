@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import './ProductCarrousel.css'
 import axios from 'axios';
+import CartContext from '../../../context/cart/CartContext';
 
-export default function ProductsCarrousel({addToCart, product}) {
+export default function ProductsCarrousel({product}) {
     const [data, setData]=useState([]);
+    const {addToCart}=useContext(CartContext);
     useEffect(()=>{
         axios
         .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products`)
@@ -12,9 +14,6 @@ export default function ProductsCarrousel({addToCart, product}) {
         })
         .catch(err=>console.error(err))
     },[])
-    console.log(
-        data
-    );
     const carrousel = useRef(null);
     function handlePrevious(e){
         e.preventDefault();
@@ -36,7 +35,7 @@ export default function ProductsCarrousel({addToCart, product}) {
             <div key={productCarrousel.id} className="flex-colum">
             <img className="productsCarrousel__carrousel-image" src={productCarrousel.image} draggable="false" alt={`Foto de ${productCarrousel.name}`}/>
             <div className="productsCarrousel__carrousel-info">
-             <p className="productsCarrousel__carrousel-info__name">{productCarrousel.name}</p>
+             <p className="productsCarrousel__carrousel-info__name" onClick={()=>addToCart(productCarrousel)}>{productCarrousel.name}</p>
              <p className="productsCarrousel__carrousel-info__price">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'  }).format(productCarrousel.currentPrice)}</p>
              </div>
              </div>

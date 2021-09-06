@@ -6,7 +6,7 @@ export default function CartItem({item, formatCurrency}) {
     useEffect(()=>{
     },[])
     return (
-        <li className="cartItem">
+        <li className="cartItem" key={item.id}>
             <img className="cartItem__image" src={item.image} alt={`Foto de ${item.name}`}/>
             <div className="cartItem__info">
                 <h6 className="cartItem__info-title">{item.name} </h6>

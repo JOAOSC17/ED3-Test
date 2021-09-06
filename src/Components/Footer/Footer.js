@@ -11,21 +11,26 @@ export default function Footer() {
             <img src={process.env.PUBLIC_URL + './assets/youtube.svg'} draggable="false" alt="youtube"/>
             </div>
             <div className="footer__info">
+            <div className="footer__info-cta__mobile">
+                <h6>GANHE <span>20% OFF</span> NA PRIMEIRA COMPRA</h6>
+                <input type="text" placeholder="CADASTRE SEU EMAIL"/>
+                <button type="button">Enviar</button>
+                </div>
                 <div className="footer__info-req">
-                <h6>PEDIDOS</h6>
+                <h6 className="underline">PEDIDOS</h6>
                 <p>Meus pedidos</p>
                 <p>Minha conta</p>
                 </div>
                 <div className="border"></div>
                 <div className="footer__info-about">
-                <h6>SOMOS ED3</h6>
+                <h6 className="underline">SOMOS ED3</h6>
                 <p>Sobre Política de privacidade</p>
                 <p>Trocas e devoluções</p>
                 <p>Termos e condições</p>
                 </div>
                 <div className="border"></div>
                 <div className="footer__info-attend">
-                <h6>ATENDIMENTO</h6>
+                <h6 className="underline">ATENDIMENTO</h6>
                 <p>sac@ed3.com.br</p>
                 <p>(11) 2128-5643</p>
                 </div>
@@ -41,7 +46,10 @@ export default function Footer() {
                 <img src={process.env.PUBLIC_URL + './assets/clearsale.svg'}  draggable="false" alt="clearsale"/>
                 </div>
             </div>
-            <p className="footer__credits">© 2020 Loja ED3. All Rights Reserved. CNPJ 99999999/000 1-99</p>
+            <div className="footer__credits">
+            <p >© 2020 Loja ED3. All Rights Reserved. CNPJ 99999999/000 1-99</p>
+            <p className="footer__credits">© 2020 Cabral. All Rights Reserved.</p>
+            </div>
         </footer>
     )
 }

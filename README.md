@@ -1,7 +1,7 @@
 # Desafio ED-3
 Projeto que simula um site de eccomerce e é baseado no desafio da :link: [ED-3](https://github.com/ed3digital/frontend-test)
+
 Nesta página única tem o produto pricipal, um carrosel de produtos recomendados e um carrinho de compras.
-## :information_source:
 ## 🚀 Tecnologias Usadas
 - JSX
 - CSS 

@@ -165,3 +165,197 @@ padding: 16px 0;
 .product-decoration__images > img:nth-child(2n){
     margin: 0 18px;
 }
+@media screen and (max-width:1085px){
+    .productSingle{
+        width: 100vw;
+        height: 100%;
+        display: block;
+        position: relative;
+    }
+    .productSingle-images{
+        min-width: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-left: 60px;
+    }
+    .productSingle-images__btns{
+        position: absolute;
+        top: 45%;
+    }
+    .productSingle-images > img{
+        max-width: 50%;
+    }.productSingle-images__btns{
+       font-size: 20px;
+    }
+    .productSingle-info{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0px;
+    }
+    .productSingle-info__princ{
+        width: 100%;
+        color:#4E4E4E;
+    }
+    .productSingle-info__princ-back{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: -30px;
+        font-size: 11px;
+    }
+    .productSingle-info__princ-title{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: -60px;
+        font-size: 18px;
+    }
+    .productSingle-info__princ-price{
+        padding-top: 10px;
+        font-weight: bold;
+        color: #fe2156;
+        font-size: 18px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .productSingle-info__princ-price > s{
+        color: #4E4E4E;
+        margin-right: 10px;
+    }
+    .productSingle-info__princ-cardPortion{
+        display: block;
+        text-align: center;
+        font-size: 13px;
+    }
+    .product-decoration{
+        width: 100vw;
+    }
+    .product-decoration__title{
+        display: flex;
+        justify-content: center;
+        font-size: 26px;
+        padding: 10px 0;
+        color: #4E4E4E;
+    }
+    .product-decoration__images{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+    .product-decoration__images img{
+        margin: 10px auto;
+        max-width: 280px;
+    }
+    .product-decoration__images > img:nth-child(2n){
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:1020px){
+    .productSingle-images{
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width:980px){
+    .productSingle-images{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width:420px){
+    .productSingle-info__princ{
+        width: 100%;
+        color:#4E4E4E;
+    }
+    .productSingle-info__princ-back{
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        font-size: 16px;
+        text-align: center;
+        top: -40px;
+    }
+    .productSingle-info__princ-title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .productSingle-info__princ-price{
+        padding-top: 10px;
+        font-weight: bold;
+        color: #fe2156;
+        font-size: 22px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .productSingle-info__princ-price > s{
+        color: #4E4E4E;
+        margin-right: 10px;
+    }
+    .productSingle-info__princ-cardPortion{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+    }
+    .productSingle-info__sizes-guide{
+        font-size: 11px;     
+        text-align: center;
+    }
+    .productSingle-info__cta{
+        margin-top: 20px;
+    }
+    .productSingle-info__cta-addCart{
+        padding: 10px 25px;
+        background-color: #4E4E4E;
+        color: white;
+        font-size: 16px;
+    }
+    .productSingle-info__cta-desc{
+        max-width: 330px;
+        font-size: 13px;
+        margin: 20px auto;
+    }
+    .productSingle-info__cta-moreDetails{
+    border-top: 1px solid #4E4E4E;
+    border-bottom: 1px solid #4E4E4E;
+    padding: 13px 0;
+    }
+    .productSingle-info__cta__transport{
+        font-size: 10px;
+        margin: 0 auto;
+    }
+    .productSingle-info__cta__transport > button{
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .product-decoration{
+       display: none;
+    }
+}
+@media screen and (max-width:420px){
+    .productSingle-info__princ-back{
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .productSingle-info__princ-title{
+        font-size: 15px;
+        text-align: center;
+    }
+    .productSingle-info__princ-price{
+        font-size: 18px;
+    }
+}

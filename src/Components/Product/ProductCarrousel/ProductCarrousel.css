@@ -54,3 +54,11 @@
     font-weight: bold;
     margin-top: 10px;
 }
+@media screen and (max-width:420px){
+    .productsCarrousel__carrousel-image{
+        max-width: 260px;
+        margin-left: 10px;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import Cart from './Components/Cart/Cart';
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Product from './Components/Product/Product';
 import CartContext from './context/cart/CartContext';
@@ -10,6 +11,7 @@ function App() {
     <>
     <Header/>
     <Product/>
+    <Footer/>
     {showCart &&(
       <div className="cart__overlay">
       <Cart/>

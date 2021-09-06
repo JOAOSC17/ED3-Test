@@ -10,6 +10,7 @@ export default function Cart() {
     function formatCurrency (currency){
       return  new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(currency)
     }
+    console.log(cartItems);
     useEffect(()=>{
         axios
         .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products`)

@@ -15,13 +15,13 @@ export default function Header() {
             <div className="header-navbar__logo"><img src={'./assets/logo.svg'} draggable="false" alt="logo"/></div>
         <div>
         <ul className="header-navbar__links">
-            <li className="header-navbar__link-item"><a href="#">CAMISAS</a></li>
-            <li className="header-navbar__link-item"><a href="#">CALÇAS</a></li>
-            <li className="header-navbar__link-item"><a href="#">BLUSAS</a></li>
-            <li className="header-navbar__link-item"><a href="#">CALÇADOS</a></li>
-            <li className="header-navbar__link-item"><a href="#">ÓCULOS</a></li>
-            <li className="header-navbar__link-item"><a href="#">ACESSÓRIOS</a></li>
-            <li className="header-navbar__link-item"><a href="#" style={{color:'#fe2156'}} >OUTLET</a></li>         
+            <li className="header-navbar__link-item">CAMISAS</li>
+            <li className="header-navbar__link-item">CALÇAS</li>
+            <li className="header-navbar__link-item">BLUSAS</li>
+            <li className="header-navbar__link-item">CALÇADOS</li>
+            <li className="header-navbar__link-item">ÓCULOS</li>
+            <li className="header-navbar__link-item">ACESSÓRIOS</li>
+            <li className="header-navbar__link-item" style={{color:'#fe2156'}}>OUTLET</li>         
         </ul>    
         </div>
         <div className="header-user">

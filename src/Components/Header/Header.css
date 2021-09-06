@@ -28,6 +28,7 @@
 }
 .header-navbar__link-item > a{
     color: #4E4E4E;
+    cursor: pointer;
 }
 .header-user{
     display: flex;

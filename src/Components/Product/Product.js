@@ -17,7 +17,7 @@ export default function Product() {
         console.log(product);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
-    if(product.length===0) return <span>Carregando..</span>
+    if(product.length===0) return <span className="loading">Carregando...</span>
     return (
         <main className="main">
             <section className="productSingle">

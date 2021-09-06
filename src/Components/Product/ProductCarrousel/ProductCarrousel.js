@@ -24,7 +24,7 @@ export default function ProductsCarrousel({product}) {
         e.preventDefault();
         carrousel.current.scrollLeft+=carrousel.current.offsetWidth;
     }
-    if(!data || !data.length) return  <span>Carregando...</span>
+    if(!data || !data.length) return  <span className="loading">Carregando...</span>
     return(
         <section className="productsCarrousel">
            
@@ -34,7 +34,7 @@ export default function ProductsCarrousel({product}) {
             <div className="productsCarrousel__carrousel" ref={carrousel}>
           {data.map(productCarrousel=>(
             <div key={productCarrousel.id} className="flex-colum">
-            <img className="productsCarrousel__carrousel-image" src={productCarrousel.image} draggable="false" alt={`Foto de ${productCarrousel.name}`}/>
+            <img className="productsCarrousel__carrousel-image" onClick={()=>addToCart(productCarrousel)} src={productCarrousel.image} draggable="false" alt={`Foto de ${productCarrousel.name}`}/>
             <div className="productsCarrousel__carrousel-info">
              <p className="productsCarrousel__carrousel-info__name" onClick={()=>addToCart(productCarrousel)}>{productCarrousel.name}</p>
              <p className="productsCarrousel__carrousel-info__price">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'  }).format(productCarrousel.currentPrice)}</p>

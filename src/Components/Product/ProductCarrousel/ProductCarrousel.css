@@ -45,6 +45,10 @@
     display: flex;
     flex-direction: column;
 }
+.productsCarrousel__carrousel-info__name,
+.productsCarrousel__carrousel-image{
+    cursor: pointer;
+}
 .productsCarrousel__carrousel-info{
     color: #4E4E4E;
     text-align: center;

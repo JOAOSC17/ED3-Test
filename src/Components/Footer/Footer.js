@@ -4,11 +4,11 @@ export default function Footer() {
     return (
         <footer className="footer">
            <div className="footer__connection">
-            <img src={process.env.PUBLIC_URL + './assets/spotify.svg'} draggable="false" alt="spotify"/>
-            <img src={process.env.PUBLIC_URL + './assets/instagram.svg'} draggable="false" alt="instagram"/>
-            <img src={process.env.PUBLIC_URL + './assets/twitter.svg'} draggable="false" alt="twitter"/>
-            <img src={process.env.PUBLIC_URL + './assets/facebook.svg'} draggable="false" alt="facebook"/>
-            <img src={process.env.PUBLIC_URL + './assets/youtube.svg'} draggable="false" alt="youtube"/>
+            <img src={'./assets/spotify.svg'} draggable="false" alt="spotify"/>
+            <img src={'./assets/instagram.svg'} draggable="false" alt="instagram"/>
+            <img src={'./assets/twitter.svg'} draggable="false" alt="twitter"/>
+            <img src={'./assets/facebook.svg'} draggable="false" alt="facebook"/>
+            <img src={'./assets/youtube.svg'} draggable="false" alt="youtube"/>
             </div>
             <div className="footer__info">
             <div className="footer__info-cta__mobile">
@@ -42,8 +42,8 @@ export default function Footer() {
                 <button type="button">Enviar</button>
                 </div>
                 <p>Cadastre seu e-mail</p>
-                <img src={process.env.PUBLIC_URL + './assets/secure.svg'}  draggable="false" alt="secure"/>
-                <img src={process.env.PUBLIC_URL + './assets/clearsale.svg'}  draggable="false" alt="clearsale"/>
+                <img src={'./assets/secure.svg'}  draggable="false" alt="secure"/>
+                <img src={'./assets/clearsale.svg'}  draggable="false" alt="clearsale"/>
                 </div>
             </div>
             <div className="footer__credits">

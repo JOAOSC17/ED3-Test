@@ -13,6 +13,7 @@ export default function ProductsCarrousel({product}) {
             setData(response.data.filter(res=>res.id!==product.id))
         })
         .catch(err=>console.error(err))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     const carrousel = useRef(null);
     function handlePrevious(e){

@@ -12,7 +12,7 @@ export default function Header() {
         <div className="header-navbar__toggle" id="nav-toggle">
         <i className="fas fa-bars"></i>
         </div>
-            <div className="header-navbar__logo"><img src={process.env.PUBLIC_URL + './assets/logo.svg'} draggable="false" alt="logo"/></div>
+            <div className="header-navbar__logo"><img src={'./assets/logo.svg'} draggable="false" alt="logo"/></div>
         <div>
         <ul className="header-navbar__links">
             <li className="header-navbar__link-item"><a href="#">CAMISAS</a></li>

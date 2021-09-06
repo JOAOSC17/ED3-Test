@@ -15,6 +15,7 @@ export default function Product() {
         .then(response=>setProduct(response.data))
         .catch(err=>console.error(err))
         console.log(product);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     if(product.length===0) return <span>Carregando..</span>
     return (
@@ -64,9 +65,9 @@ export default function Product() {
         <section className="product-decoration">
          <h5 className="product-decoration__title">#STAYCONNECTED</h5>
          <div className="product-decoration__images">
-         <img src={process.env.PUBLIC_URL + './assets/decorationMar.jpg'} draggable="false" alt="Pessoa Nadando no Mar"/>
-         <img src={process.env.PUBLIC_URL + './assets/decorationMotocicle.jpg'} draggable="false" alt="Pessoa Andando de Motocicleta"/>
-         <img src={process.env.PUBLIC_URL + './assets/decorationFuckRacism.jpg'} draggable="false" alt="Fuck Racism"/>
+         <img src={'./assets/decorationMar.jpg'} draggable="false" alt="Pessoa Nadando no Mar"/>
+         <img src={'./assets/decorationMotocicle.jpg'} draggable="false" alt="Pessoa Andando de Motocicleta"/>
+         <img src={'./assets/decorationFuckRacism.jpg'} draggable="false" alt="Fuck Racism"/>
          </div>
         </section>
       

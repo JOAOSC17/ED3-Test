@@ -5,7 +5,7 @@ import CartContext from '../../context/cart/CartContext'
 import './Cart.css'
 import CartItem from './CartItem/CartItem';
 export default function Cart() {
-    const {showCart, cartItems, showHideCart}=useContext(CartContext);
+    const {cartItems, showHideCart}=useContext(CartContext);
     const [product, setProduct] = useState([])
     function formatCurrency (currency){
       return  new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(currency)
@@ -17,6 +17,7 @@ export default function Cart() {
         .then(response=>setProduct(response.data))
         .catch(err=>console.error(err))
         console.log(product);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return (
         <>

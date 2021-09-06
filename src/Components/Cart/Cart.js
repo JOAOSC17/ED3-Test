@@ -18,17 +18,6 @@ export default function Cart() {
         .catch(err=>console.error(err))
         console.log(product);
     },[])
-        function getTotal() {
-          let total = 0;
-      
-          product.forEach((product) => {
-            if (product.inCart === true) {
-              total = total + product.price * product.qty;
-            }
-            return "";
-          });
-          return total;
-        }
     return (
         <>
         <div className="cart">
@@ -40,7 +29,7 @@ export default function Cart() {
                 <span><i className="fas fa-shopping-bag"></i></span>
                 <div className="cart__cart-header-count">{Math.ceil(cartItems.reduce((amount,item) => item.qty + amount, 0))}</div>
                     </div>
-                    {cartItems.length ===0?(<h6>Não há produtos no carrinho</h6>):(
+                    {cartItems.length ===0?(<h6 className="cart__cart-title">Não há produtos no carrinho</h6>):(
                         <>
                         <ul className="cart__cart-items">
                             {cartItems.map(item=>(

@@ -14,7 +14,6 @@ export default function Product() {
         .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products/1`)
         .then(response=>setProduct(response.data))
         .catch(err=>console.error(err))
-        console.log(product);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     if(product.length===0) return <span className="loading">Carregando...</span>

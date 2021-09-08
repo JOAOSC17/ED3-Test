@@ -19,7 +19,6 @@ export default function CartState({children, id}) {
         axios
           .get('https://my-json-server.typicode.com/JOAOSC17/ED3/products')
           .then((response) => {
-              console.log(response);
             let newArray = response.data.map((product) => {
               return { ...product, qty: 0, inCart: false };
             });

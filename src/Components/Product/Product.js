@@ -1,21 +1,21 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import './Product.css'
-import ProductCarrousel from './ProductCarrousel/ProductCarrousel'
 import CartContext from '../../context/cart/CartContext';
-export default function Product() {
-    const [product, setProduct] = useState([])
+export default function Product({id}) {
     const {addToCart}= useContext(CartContext)
     function formatCurrency (currency){
-      return  new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(currency)
-    }
+        return  new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(currency)
+      }
+    const [product, setProduct] = useState([])
     useEffect(()=>{
         axios
-        .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products/1`)
+        .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products/${id}`)
         .then(response=>setProduct(response.data))
         .catch(err=>console.error(err))
+        console.log(product);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    },[product])
     if(product.length===0) return <span className="loading">Carregando...</span>
     return (
         <main className="main">
@@ -23,20 +23,20 @@ export default function Product() {
                 <div className="productSingle-images">
                     <button className="productSingle-images__btns" type="button"><i className="fas fa-chevron-left"/></button>
                     <img src={product.image} draggable="false" alt={`Foto De ${product.name}`}/>
-                    <img src={product.zomImage} draggable="false" alt={`Foto De ${product.name}`}/>
+                    <img src={(product.zomImage)?(product.zomImage):(product.image)} draggable="false" alt={`Foto De ${product.name}`}/>
                     <button className="productSingle-images__btns" type="button"><i className="fas fa-chevron-right"/></button>
                 </div>
                 <div className="productSingle-info">
                 <div className="productSingle-info__princ">
                     <span className="productSingle-info__princ-back">‹  VOLTAR PARA BLUSAS</span>
                     <h1 className="productSingle-info__princ-title">{product.name}</h1>
-                    <span className="productSingle-info__princ-price"><s>{formatCurrency(product.previousPrice)}</s>{formatCurrency(product.currentPrice)}</span>
+                    <span className="productSingle-info__princ-price"><s>{(product.previousPrice) && (formatCurrency(product.previousPrice))}</s>{formatCurrency(product.currentPrice)}</span>
                     <span className="productSingle-info__princ-cardPortion">EM ATÉ 3X DE R$80,70</span>
                 </div>
                 <div className="productSingle-info__colors">
-                <div className="productSingle-info__colors-option" style={(product.id===1)?{backgroundColor:`${product.colors[0].colorHex}`}:('')}>
+                <div className="productSingle-info__colors-option" style={(product.colors[0])?{backgroundColor:`${product.colors[0].colorHex}`}:('')}>
                 </div>
-                <div className="productSingle-info__colors-option" style={(product.id===1)?{backgroundColor:`${product.colors[1].colorHex}`}:('')}>
+                <div className="productSingle-info__colors-option" style={(product.colors[1])?{backgroundColor:`${product.colors[1].colorHex}`}:('')}>
                 </div>
                 </div>
             <div className="productSingle-info__sizes">
@@ -59,15 +59,6 @@ export default function Product() {
                     </div>
                 </div>
             </div>
-        </section>
-        <ProductCarrousel product={product}/>
-        <section className="product-decoration">
-         <h5 className="product-decoration__title">#STAYCONNECTED</h5>
-         <div className="product-decoration__images">
-         <img src={'./assets/decorationMar.jpg'} draggable="false" alt="Pessoa Nadando no Mar"/>
-         <img src={'./assets/decorationMotocicle.jpg'} draggable="false" alt="Pessoa Andando de Motocicleta"/>
-         <img src={'./assets/decorationFuckRacism.jpg'} draggable="false" alt="Fuck Racism"/>
-         </div>
         </section>
       
         </main>

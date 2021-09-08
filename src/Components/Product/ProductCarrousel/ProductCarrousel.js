@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import './ProductCarrousel.css'
 import axios from 'axios';
 import CartContext from '../../../context/cart/CartContext';
+import { Link } from 'react-router-dom';
 
-export default function ProductsCarrousel({product}) {
+export default function ProductsCarrousel() {
     const [data, setData]=useState([]);
     const {addToCart}=useContext(CartContext);
     useEffect(()=>{
         axios
         .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products`)
-        .then(response=>{
-            setData(response.data.filter(res=>res.id!==product.id))
+        .then((response)=>{
+            setData(response.data)
         })
         .catch(err=>console.error(err))
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -34,9 +35,9 @@ export default function ProductsCarrousel({product}) {
             <div className="productsCarrousel__carrousel" ref={carrousel}>
           {data.map(productCarrousel=>(
             <div key={productCarrousel.id} className="flex-colum">
-            <img className="productsCarrousel__carrousel-image" onClick={()=>addToCart(productCarrousel)} src={productCarrousel.image} draggable="false" alt={`Foto de ${productCarrousel.name}`}/>
+            <Link to={`/products/${productCarrousel.id}`}><img className="productsCarrousel__carrousel-image" src={productCarrousel.image} draggable="false" alt={`Foto de ${productCarrousel.name}`}/></Link>
             <div className="productsCarrousel__carrousel-info">
-             <p className="productsCarrousel__carrousel-info__name" onClick={()=>addToCart(productCarrousel)}>{productCarrousel.name}</p>
+            <Link to={`/products/${productCarrousel.id}`}><p className="productsCarrousel__carrousel-info__name">{productCarrousel.name}</p></Link>
              <p className="productsCarrousel__carrousel-info__price">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'  }).format(productCarrousel.currentPrice)}</p>
              </div>
              </div>

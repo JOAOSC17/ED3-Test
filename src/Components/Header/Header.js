@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext'
 import './Header.css'
 
@@ -15,13 +16,13 @@ export default function Header() {
             <div className="header-navbar__logo"><img src={'./assets/logo.svg'} draggable="false" alt="logo"/></div>
         <div>
         <ul className="header-navbar__links">
-            <li className="header-navbar__link-item">CAMISAS</li>
-            <li className="header-navbar__link-item">CALÇAS</li>
-            <li className="header-navbar__link-item">BLUSAS</li>
-            <li className="header-navbar__link-item">CALÇADOS</li>
-            <li className="header-navbar__link-item">ÓCULOS</li>
-            <li className="header-navbar__link-item">ACESSÓRIOS</li>
-            <li className="header-navbar__link-item" style={{color:'#fe2156'}}>OUTLET</li>         
+            <li className="header-navbar__link-item"><Link to="/">CAMISAS</Link></li>
+            <li className="header-navbar__link-item"><Link to="/">CALÇAS</Link></li>
+            <li className="header-navbar__link-item"><Link to="/">BLUSAS</Link></li>
+            <li className="header-navbar__link-item"><Link to="/">CALÇADOS</Link></li>
+            <li className="header-navbar__link-item"><Link to="/">ÓCULOS</Link></li>
+            <li className="header-navbar__link-item"><Link to="/">ACESSÓRIOS</Link></li>
+            <li className="header-navbar__link-item" style={{color:'#fe2156'}}><Link to="/">OUTLET</Link></li>         
         </ul>    
         </div>
         <div className="header-user">

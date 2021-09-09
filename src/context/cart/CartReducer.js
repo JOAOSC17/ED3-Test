@@ -1,4 +1,4 @@
-import { ADD_TO_CART, FETCH_ALL_PRODUCTS_FAILURE, FETCH_ALL_PRODUCTS_LOADING, FETCH_ALL_PRODUCTS_SUCCESS, REMOVE_ITEM, SHOW_HIDE_CART } from '../Types'
+import { ADD_TO_CART, FETCH_ALL_PRODUCTS_FAILURE, FETCH_ALL_PRODUCTS_LOADING, FETCH_ALL_PRODUCTS_SUCCESS, REMOVE_ITEM, SHOW_HIDE_CART, SHOW_HIDE_SIDEBAR } from '../Types'
 export default function CartReducer(state, action) {
     switch(action.type){
         case FETCH_ALL_PRODUCTS_LOADING:{
@@ -24,6 +24,12 @@ export default function CartReducer(state, action) {
             return{
                 ...state,
                 showCart:!state.showCart
+            }
+        }
+        case SHOW_HIDE_SIDEBAR:{
+            return{
+                ...state,
+                showSide:!state.showSide
             }
         }
         case ADD_TO_CART:{

@@ -4,15 +4,15 @@ import CartContext from '../../context/cart/CartContext'
 import './Header.css'
 
 export default function Header() {
-    const {showHideCart}=useContext(CartContext);
+    const {showHideCart, showHideSide}=useContext(CartContext);
     return (
         <header className="header">
         <span className="header-promotion">15% DE DESCONTO NA SEGUNDA COMPRA <span>-</span><u>SAIBA MAIS</u>
         </span>
         <nav className="header-navbar">
-        <div className="header-navbar__toggle" id="nav-toggle">
+        <button className="header-navbar__toggle" id="nav-toggle" onClick={()=>showHideSide()}type="button">
         <i className="fas fa-bars"></i>
-        </div>
+        </button>
             <div className="header-navbar__logo"><img src={'./assets/logo.svg'} draggable="false" alt="logo"/></div>
         <div>
         <ul className="header-navbar__links">

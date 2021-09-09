@@ -1,0 +1,33 @@
+.sidebar{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    max-width: 400px;
+}
+.sidebar-close{
+    display: flex;
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+}
+.sidebar-list{
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-list__item{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #cecece;
+    margin: 15px 0;
+}
+@media screen and (max-width:440px){
+    .sidebar-list{
+        max-width: 260px;
+        height: 100vh;
+        background-color: white;
+        position: relative;
+    }
+}

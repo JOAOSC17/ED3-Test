@@ -7,8 +7,9 @@ import { BrowserRouter as Router , Route} from 'react-router-dom'
 import ProductPage from './pages/ProductPage';
 import StayConnect from './Components/StayConnect/StayConnect';
 import ProductsCarrousel from './Components/Product/ProductCarrousel/ProductCarrousel';
+import Sidebar from './Sidebar/Sidebar';
 function App() {  
-  const {showCart}=useContext(CartContext);  
+  const {showCart, showSide}=useContext(CartContext);  
   return (
     <Router>
       <Route path="/">
@@ -26,6 +27,13 @@ function App() {
     <Route path="/">
     <Footer/>
     </Route>
+    <Route path="/">
+    {showSide &&(
+      <div className="cart__overlay">
+      <Sidebar/>
+      </div>
+      )}
+      </Route>
     <Route path="/">
     {showCart &&(
       <div className="cart__overlay">

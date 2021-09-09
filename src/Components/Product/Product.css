@@ -5,31 +5,31 @@
     grid-template-columns: 2fr 1fr;
 }
 .productSingle-images{
-    width: 100%;
+    margin:  0 auto;
     margin-top: 20px;
-    margin-left: 20px;
-    margin: auto;
+    display: flex;
     position: relative;
-}
-.productSingle-images__btns{
-    position: absolute;
-    top: 50%;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: none; 
 }
 .productSingle-images__btns > .fas.fa-chevron-right{
     position: absolute;
+    top: 50%;
     right: 20px;
     font-size: 30px;
-    color: rgb(255, 255, 255);
 }
 .productSingle-images__btns > .fas.fa-chevron-left{
     position: absolute;
+    top: 50%;
     left: 20px;
     font-size: 30px;
-    color: rgb(255, 255, 255);
 }
 .productSingle-images > img{
-    height: 100%;
-    width: 50%;
+    max-width: 500%;
+    object-fit: cover;
+    margin: 0;
 }.productSingle-images__btns{
    font-size: 20px;
 }
@@ -74,7 +74,8 @@
 .productSingle-info__colors{
    display: flex;
    justify-content: center;
-   padding: 10px 0;
+   margin-top: -30px;
+   padding-bottom: 20px;
 }
 .productSingle-info__colors-option{
     margin-left: 10px;
@@ -83,9 +84,8 @@
     height: 25px;
     cursor: pointer;
 }
-.productSingle-info__colors-option:active,
-.productSingle-info__colors-option:focus{
-    border: 1px solid #4E4E4E;
+label input[type="radio"]:checked +  .productSingle-info__colors-option{
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .productSingle-info__sizes{
     text-align: center;
@@ -93,17 +93,41 @@
     width: 90%;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
+.sizes{
+    display: flex;
+    justify-content: center;
+}
+.radioButton[type="radio"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: transparent;
+    appearance: none;
+}
+label input[type="radio"]:checked + span{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+#p{
+    padding: 5px 8px;
+}
+#m{
+    padding: 5px 8px;
+}
+#g{
+    padding: 5px 8px;
+}
+#xg{    
+    padding: 5px 3px;
+}
 .productSingle-info__sizes-size{
     margin-left: 10px;
     border-radius: 50%;
-    padding: 5px;
-    width: 90px;
+    width: 50px;
     height: 50px;
     font-size: 20px;
     cursor: pointer;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.2);;
 }
 .productSingle-info__sizes-size.active{
     color: #4E4E4E;

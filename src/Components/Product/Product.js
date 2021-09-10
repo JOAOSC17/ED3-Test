@@ -33,7 +33,7 @@ export default function Product({id}) {
         .get(`https://my-json-server.typicode.com/JOAOSC17/ED3/products/${id}`)
         .then(response=>setProduct(response.data))
         .catch(err=>console.error(err))
-    },[product])
+    },[id])
     
     var settings = {
         dots: false,

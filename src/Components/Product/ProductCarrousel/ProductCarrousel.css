@@ -1,18 +1,13 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 .productsCarrousel{
     width: 100vw;
     background-color: #F5F5F5;
     position: relative;
     padding-bottom: 30px;
-    margin-top: 200px;
 }
 .productsCarrousel__carrousel{
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    flex: none;
-}
-.productsCarrousel__carrousel::-webkit-scrollbar{
-    display: none;
+    margin: 0 5px;
 }
 .productsCarrousel__title{
     display: block;
@@ -62,7 +57,7 @@
 }
 @media screen and (max-width:420px){
     .productsCarrousel__carrousel-image{
-        max-width: 260px;
+        max-width: 230px;
         margin-left: 10px;
         height: 100%;
         object-fit: cover;

@@ -2,11 +2,10 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState} from 'react'
 import './Product.css'
 import Slider from 'react-slick';
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import CartContext from '../../context/cart/CartContext';
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { style, onClick } = props;
     return (
       <button
         style={{ ...style, display: "block", background: "red" }}
@@ -16,7 +15,7 @@ function SampleNextArrow(props) {
   }
   
   function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { style, onClick } = props;
     return (
       <button
         style={{ ...style, display: "block", background: "green" }}

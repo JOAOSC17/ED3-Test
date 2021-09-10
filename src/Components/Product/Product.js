@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState} from 'react'
 import './Product.css'
 import Slider from 'react-slick';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import CartContext from '../../context/cart/CartContext';
 function SampleNextArrow(props) {
     const { style, onClick } = props;

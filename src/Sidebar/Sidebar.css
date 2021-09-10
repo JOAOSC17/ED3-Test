@@ -3,6 +3,7 @@
     justify-content: flex-start;
     color: white;
     max-width: 400px;
+    z-index: 7;
 }
 .sidebar-close{
     display: flex;

@@ -3,6 +3,7 @@ import axios from 'axios'
 import CartContext from './CartContext'
 import CartReducer from './CartReducer';
 import { ADD_TO_CART, FETCH_ALL_PRODUCTS_FAILURE, FETCH_ALL_PRODUCTS_LOADING, FETCH_ALL_PRODUCTS_SUCCESS, REMOVE_ITEM, SHOW_HIDE_CART, SHOW_HIDE_SIDEBAR } from '../Types'
+import { toast } from 'react-toastify';
 
 
 export default function CartState({children, id}) {
@@ -32,6 +33,16 @@ export default function CartState({children, id}) {
         
     function addToCart(item){
         dispatch({type:ADD_TO_CART, payload:item})
+        toast.success('Compra Efetuada Com Sucesso!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
     function showHideCart(){
         dispatch({type:SHOW_HIDE_CART})

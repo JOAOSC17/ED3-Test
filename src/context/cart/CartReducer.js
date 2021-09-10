@@ -36,7 +36,7 @@ export default function CartReducer(state, action) {
             let  productsCopy = [...state.products];
             let match = productsCopy.filter((item) => item.id === action.payload.id)
             if(match){
-                match[0].qty+=.5;
+                match[0].qty+=1;
                 match[0].inCart= true;            
             }
             return{

@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState} from 'react'
 import './Product.css'
 import Slider from 'react-slick';
 import CartContext from '../../context/cart/CartContext';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
@@ -111,6 +113,19 @@ export default function Product({id}) {
                      </div>
                  </div>
              </div>
+             
+                 
+             <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
          </section>
     )
 }

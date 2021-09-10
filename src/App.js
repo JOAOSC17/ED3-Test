@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Cart from './Components/Cart/Cart';
+import Cart from './Components/Cart/Cart'; 
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import CartContext from './context/cart/CartContext';
@@ -15,6 +15,8 @@ function App() {
       <Route path="/">
     <Header/>
     </Route>
+    
+    <main className="main"> 
     <Route path="/products/:id">
       <ProductPage/>
     </Route>
@@ -24,6 +26,7 @@ function App() {
     <Route path="/">
       <StayConnect/>
     </Route>
+    </main>
     <Route path="/">
     <Footer/>
     </Route>

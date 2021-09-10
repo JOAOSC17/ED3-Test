@@ -6,10 +6,8 @@
   font-family: 'Monteserrat', sans-serif;
 }
 body{
-  display: flex;
-  justify-content: center;
   overflow-x: hidden;
-} 
+}
 li{
   list-style-type: none;
 }

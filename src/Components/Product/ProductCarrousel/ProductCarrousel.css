@@ -3,6 +3,7 @@
     background-color: #F5F5F5;
     position: relative;
     padding-bottom: 30px;
+    margin-top: 200px;
 }
 .productsCarrousel__carrousel{
     display: flex;

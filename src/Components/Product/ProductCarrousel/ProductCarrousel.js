@@ -33,7 +33,7 @@ export default function ProductsCarrousel() {
             <div className="productsCarrousel__carrousel" ref={carrousel}>
           {data.map(productCarrousel=>(
             <div key={productCarrousel.id} className="flex-colum">
-            <Link to={`/products/${productCarrousel.id}`}><img className="productsCarrousel__carrousel-image" src={productCarrousel.images[0].image} draggable="false" alt={`Foto de ${productCarrousel.name}`}/></Link>
+            <Link to={`/products/${productCarrousel.id}`}><img className="productsCarrousel__carrousel-image" src={productCarrousel.images[0]} draggable="false" alt={`Foto de ${productCarrousel.name}`}/></Link>
             <div className="productsCarrousel__carrousel-info">
             <Link to={`/products/${productCarrousel.id}`}><p className="productsCarrousel__carrousel-info__name">{productCarrousel.name}</p></Link>
              <p className="productsCarrousel__carrousel-info__price">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'  }).format(productCarrousel.currentPrice)}</p>

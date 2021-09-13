@@ -7,7 +7,7 @@ import { BrowserRouter as Router , Route} from 'react-router-dom'
 import ProductPage from './pages/ProductPage';
 import StayConnect from './Components/StayConnect/StayConnect';
 import ProductsCarrousel from './Components/Product/ProductCarrousel/ProductCarrousel';
-import Sidebar from './Sidebar/Sidebar';
+import Sidebar from './Components/Sidebar/Sidebar';
 function App() {  
   const {showCart, showSide}=useContext(CartContext);  
   return (
@@ -15,7 +15,6 @@ function App() {
       <Route path="/">
     <Header/>
     </Route>
-    
     <main className="main"> 
     <Route path="/products/:id">
       <ProductPage/>
@@ -47,5 +46,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

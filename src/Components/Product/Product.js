@@ -9,9 +9,9 @@ function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
       <button
-        style={{ ...style, display: "block", background: "red" }}
+        style={{ ...style, display: "block"}}
         onClick={onClick}
-      ><i className="fas fa-chevron-right"/></button>
+      ><img className="chevron-right" src={ './assets/chevron-right.svg'} draggable="false" alt="chevron-right"/></button>
     );
   }
   
@@ -19,9 +19,9 @@ function SampleNextArrow(props) {
     const { style, onClick } = props;
     return (
       <button
-        style={{ ...style, display: "block", background: "green" }}
+        style={{ ...style, display: "block"}}
         onClick={onClick}
-      ><i className="fas fa-chevron-left"/></button>
+      ><img className="chevron-left" src={ './assets/chevron-left.svg'} draggable="false" alt="chevron-left"/></button>
     );
   }
 export default function Product({id}) {

@@ -11,7 +11,7 @@ export default function Header() {
         </span>
         <nav className="header-navbar">
         <button className="header-navbar__toggle" id="nav-toggle" onClick={()=>showHideSide()}type="button">
-        <i className="fas fa-bars"></i>
+        <img src={ './assets/menu.svg'} draggable="false" alt="menu"/>
         </button>
             <div className="header-navbar__logo"><img src={'./assets/logo.svg'} draggable="false" alt="logo"/></div>
         <div>
@@ -27,12 +27,12 @@ export default function Header() {
         </div>
         <div className="header-user">
             <div className="header-user__search">
-            <input className="header-user__search-input" type="text"/>
-            <button className="header-user__search-btn" type="button"><i className="fas fa-search"></i></button>
+            <input className="header-user__search-input" placeholder="Buscar" type="text"/>
+            <button className="header-user__search-btn" type="button"><img className="search" src={ './assets/search.svg'} draggable="false" alt="search"/></button>
             </div>
             <div className="header-user__btns">
-           <button className="header-user__btn-cart" type="button" onClick={()=>showHideCart()}><i className="fas fa-shopping-bag"></i></button>
-           <button className="header-user__btn-user" type="button"><i className="far fa-user"></i></button>
+           <button className="header-user__btn-cart" type="button" onClick={()=>showHideCart()}><img src={ './assets/shopping-bag.svg'} draggable="false" alt="shopping-bag"/></button>
+           <button className="header-user__btn-user" type="button"><img src={'./assets/user.svg'} draggable="false" alt="user"/></button>
                 </div>          
         </div>
         </nav>

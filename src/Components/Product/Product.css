@@ -24,14 +24,14 @@
     position: absolute;
     top: 50%;
  } 
-.fas.fa-chevron-right{
+.chevron-right{
     position: absolute;
     top: 50%;
     right: 20px;
     font-size: 30px;
     color: rgb(255, 255, 255);
 }
-.fas.fa-chevron-left{
+.chevron-left{
     position: absolute;
     top: 50%;
     left: 20px;

@@ -19,9 +19,9 @@ export default function ProductsCarrousel() {
         const { style, onClick } = props;
         return (
           <button
-            style={{ ...style, display: "block", background: "red" }}
+            style={{ ...style, display: "block"}}
             onClick={onClick}
-          ><i className="fas fa-chevron-right"/></button>
+          ><img className="chevron-right" src={ './assets/chevron-right.svg'} draggable="false" alt="chevron-right"/></button>
         );
       }
       
@@ -29,9 +29,9 @@ export default function ProductsCarrousel() {
         const { style, onClick } = props;
         return (
           <button
-            style={{ ...style, display: "block", background: "green" }}
+            style={{ ...style, display: "block"}}
             onClick={onClick}
-          ><i className="fas fa-chevron-left"/></button>
+          ><img className="chevron-left" src={ './assets/chevron-left.svg'} draggable="false" alt="chevron-left"/></button>
         );
       }
     var settings = {
@@ -85,10 +85,10 @@ export default function ProductsCarrousel() {
     if(!data || !data.length) return  <span className="loading">Carregando...</span>
     return(
         <section className="productsCarrousel">
-          <h5 className="productsCarrousel__title">VEJA TAMBÉM</h5>                
+          <h5 className="productsCarrousel__title">VEJA TAMBÉM</h5>           
             <Slider  {...settings}>
           {data.map(productCarrousel=>(
-              <div className="productsCarrousel__carrousel">
+              <div key={productCarrousel.id} className="productsCarrousel__carrousel">
             <Link to={`/products/${productCarrousel.id}`}><img className="productsCarrousel__carrousel-image" src={productCarrousel.images[0]} draggable="false" alt={`Foto de ${productCarrousel.name}`}/></Link>
             <div className="productsCarrousel__carrousel-info">
             <Link to={`/products/${productCarrousel.id}`}><p className="productsCarrousel__carrousel-info__name">{productCarrousel.name}</p></Link>

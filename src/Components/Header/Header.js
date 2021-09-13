@@ -2,11 +2,6 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import CartContext from '../../context/cart/CartContext'
 import './Header.css'
-import logo from '../../assets/logo.svg'
-import shopping_bag from '../../assets/shopping-bag.svg'
-import user from '../../assets/user.svg'
-import menu from '../../assets/menu.svg'
-import search from '../../assets/search.svg'
 export default function Header() {
     const {showHideCart, showHideSide}=useContext(CartContext);
     return (
@@ -15,9 +10,9 @@ export default function Header() {
         </span>
         <nav className="header-navbar">
         <button className="header-navbar__toggle" id="nav-toggle" onClick={()=>showHideSide()}type="button">
-        <img src={menu} draggable="false" alt="menu"/>
+        <img src={'https://ed3.netlify.app/assets/menu.svg'} draggable="false" alt="menu"/>
         </button>
-            <div className="header-navbar__logo"><img src={logo} draggable="false" alt="logo"/></div>
+            <div className="header-navbar__logo"><img src={'https://ed3.netlify.app/assets/logo.svg'} draggable="false" alt="logo"/></div>
         <div>
         <ul className="header-navbar__links">
             <li className="header-navbar__link-item"><Link to="/">CAMISAS</Link></li>
@@ -32,11 +27,11 @@ export default function Header() {
         <div className="header-user">
             <div className="header-user__search">
             <input className="header-user__search-input" placeholder="Buscar" type="text"/>
-            <button className="header-user__search-btn" type="button"><img className="search" src={search} draggable="false" alt="search"/></button>
+            <button className="header-user__search-btn" type="button"><img className="search" src={'https://ed3.netlify.app/assets/search.svg'} draggable="false" alt="search"/></button>
             </div>
             <div className="header-user__btns">
-           <button className="header-user__btn-cart" type="button" onClick={()=>showHideCart()}><img src={shopping_bag} draggable="false" alt="shopping-bag"/></button>
-           <button className="header-user__btn-user" type="button"><img src={user} draggable="false" alt="user"/></button>
+           <button className="header-user__btn-cart" type="button" onClick={()=>showHideCart()}><img src={'https://ed3.netlify.app/assets/shopping-bag.svg'} draggable="false" alt="shopping-bag"/></button>
+           <button className="header-user__btn-user" type="button"><img src={'https://ed3.netlify.app/assets/user.svg'} draggable="false" alt="user"/></button>
                 </div>          
         </div>
         </nav>

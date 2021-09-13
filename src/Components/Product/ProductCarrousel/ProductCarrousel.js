@@ -3,8 +3,6 @@ import './ProductCarrousel.css'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import chevron_right from '../../../assets/chevron-right.svg'
-import chevron_left from '../../../assets/chevron-left.svg'
 
 export default function ProductsCarrousel() {
     const [data, setData]=useState([]);
@@ -23,7 +21,7 @@ export default function ProductsCarrousel() {
           <button
             style={{ ...style, display: "block"}}
             onClick={onClick}
-          ><img className="chevron-right" src={chevron_right} draggable="false" alt="chevron-right"/></button>
+          ><img className="chevron-right" src={'https://ed3.netlify.app/assets/chevron-right.svg'} draggable="false" alt="chevron-right"/></button>
         );
       }
       
@@ -33,7 +31,7 @@ export default function ProductsCarrousel() {
           <button
             style={{ ...style, display: "block"}}
             onClick={onClick}
-          ><img className="chevron-left" src={chevron_left} draggable="false" alt="chevron-left"/></button>
+          ><img className="chevron-left" src={'https://ed3.netlify.app/assets/chevron-left.svg'} draggable="false" alt="chevron-left"/></button>
         );
       }
     var settings = {

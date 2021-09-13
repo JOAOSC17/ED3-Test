@@ -3,8 +3,6 @@ import React, { useContext, useEffect, useState} from 'react'
 import './Product.css'
 import Slider from 'react-slick';
 import CartContext from '../../context/cart/CartContext';
-import chevron_right from '../../assets/chevron-right.svg'
-import chevron_left from '../../assets/chevron-left.svg'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function SampleNextArrow(props) {
@@ -13,7 +11,7 @@ function SampleNextArrow(props) {
       <button
         style={{ ...style, display: "block"}}
         onClick={onClick}
-      ><img className="chevron-right" src={chevron_right} draggable="false" alt="chevron-right"/></button>
+      ><img className="chevron-right" src={'https://ed3.netlify.app/assets/chevron-right.svg'} draggable="false" alt="chevron-right"/></button>
     );
   }
   
@@ -23,7 +21,7 @@ function SampleNextArrow(props) {
       <button
         style={{ ...style, display: "block"}}
         onClick={onClick}
-      ><img className="chevron-left" src={chevron_left} draggable="false" alt="chevron-left"/></button>
+      ><img className="chevron-left" src={'https://ed3.netlify.app/assets/chevron-left.svg'} draggable="false" alt="chevron-left"/></button>
     );
   }
 export default function Product({id}) {

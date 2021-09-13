@@ -1,14 +1,21 @@
 import React from 'react'
 import './Footer.css'
+import spotify from '../../assets/spotify.svg'
+import instagram from '../../assets/instagram.svg'
+import twitter from '../../assets/twitter.svg'
+import facebook from '../../assets/facebook.svg'
+import youtube from '../../assets/youtube.svg'
+import secure from '../../assets/secure.svg'
+import clearsale from '../../assets/clearsale.svg'
 export default function Footer() {
     return (
         <footer className="footer">
            <div className="footer__connection">
-            <img src={'./assets/spotify.svg'} draggable="false" alt="spotify"/>
-            <img src={'./assets/instagram.svg'} draggable="false" alt="instagram"/>
-            <img src={'./assets/twitter.svg'} draggable="false" alt="twitter"/>
-            <img src={'./assets/facebook.svg'} draggable="false" alt="facebook"/>
-            <img src={'./assets/youtube.svg'} draggable="false" alt="youtube"/>
+            <img src={spotify} draggable="false" alt="spotify"/>
+            <img src={instagram} draggable="false" alt="instagram"/>
+            <img src={twitter} draggable="false" alt="twitter"/>
+            <img src={facebook} draggable="false" alt="facebook"/>
+            <img src={youtube} draggable="false" alt="youtube"/>
             </div>
             <div className="footer__info">
             <div className="footer__info-cta__mobile">
@@ -42,8 +49,8 @@ export default function Footer() {
                 <button type="button">Enviar</button>
                 </div>
                 <p>Cadastre seu e-mail</p>
-                <img src={'./assets/secure.svg'}  draggable="false" alt="secure"/>
-                <img src={'./assets/clearsale.svg'}  draggable="false" alt="clearsale"/>
+                <img src={secure}  draggable="false" alt="secure"/>
+                <img src={clearsale}  draggable="false" alt="clearsale"/>
                 </div>
             </div>
             <div className="footer__credits">

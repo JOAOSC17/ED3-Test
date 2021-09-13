@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import CartContext from '../../context/cart/CartContext'
 import './Cart.css'
 import CartItem from './CartItem/CartItem';
+import shopping_bag from '../../assets/shopping-bag.svg'
+import close from '../../assets/close.svg'
 export default function Cart() {
     const {cartItems, showHideCart}=useContext(CartContext);
     const [product, setProduct] = useState([])
@@ -23,11 +25,11 @@ export default function Cart() {
         <>
         <div className="cart">
                 <div className="cart__close" onClick={showHideCart}>
-                <img src={ './assets/close.svg'} draggable="false" alt="close"/>
+                <img src={close} draggable="false" alt="close"/>
                 </div>
                 <div className="cart__cart">
                     <div className="cart__cart-header">
-                <span><img src={ './assets/shopping-bag.svg'} draggable="false" alt="shopping-bag"/></span>
+                <span><img src={shopping_bag} draggable="false" alt="shopping-bag"/></span>
                 <div className="cart__cart-header-count">{Math.ceil(cartItems.reduce((amount,item) => item.qty + amount, 0))}</div>
                     </div>
                     {cartItems.length ===0?(<h6 className="cart__cart-title">Não há produtos no carrinho</h6>):(

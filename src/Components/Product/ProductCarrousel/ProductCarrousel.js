@@ -21,7 +21,7 @@ export default function ProductsCarrousel() {
           <button
             style={{ ...style, display: "block"}}
             onClick={onClick}
-          ><img className="chevron-right" src={'https://ed3.netlify.app/assets/chevron-right.svg'} draggable="false" alt="chevron-right"/></button>
+          ><img style={{zIndex:'5'}} className="chevron-right" src={'https://ed3.netlify.app/assets/chevron-right.svg'} draggable="false" alt="chevron-right"/></button>
         );
       }
       
@@ -85,7 +85,8 @@ export default function ProductsCarrousel() {
     if(!data || !data.length) return  <span className="loading">Carregando...</span>
     return(
         <section className="productsCarrousel">
-          <h5 className="productsCarrousel__title">VEJA TAMBÉM</h5>           
+          <h5 className="productsCarrousel__title">VEJA TAMBÉM</h5> 
+              <div className="carrousel">          
             <Slider  {...settings}>
           {data.map(productCarrousel=>(
               <div key={productCarrousel.id} className="productsCarrousel__carrousel">
@@ -97,6 +98,7 @@ export default function ProductsCarrousel() {
              </div>
             ))}
             </Slider>
+            </div>
         </section>
     )
 }
